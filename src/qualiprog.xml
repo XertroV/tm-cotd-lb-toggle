@@ -1,0 +1,1656 @@
+
+<manialink name="UIModule_COTDQualifications_QualificationsProgress" version="3">
+
+<!-- @Component start component-cmgame-uimodules -->
+<framemodel id="component-cmgame-uimodules">
+		</framemodel>
+<!-- @Component end component-cmgame-uimodules -->
+
+<!-- @Component start share-menu-navigation -->
+<framemodel id="share-menu-navigation">
+		</framemodel>
+<!-- @Component end share-menu-navigation -->
+
+<!-- @Component start component-navigation -->
+<framemodel id="component-navigation">
+		</framemodel>
+<!-- @Component end component-navigation -->
+
+<!-- @Component start component-loadingspinner -->
+<framemodel id="component-loadingspinner">
+<quad id="menu-libs-loading-spinner_quad-dimmer" size="320 180" halign="center" valign="center" bgcolor="000514" opacity="0.8" fullscreen="1" z-index="0" hidden="1"/>
+<quad id="menu-libs-loading-spinner_quad-loading" halign="center" valign="center" image="file://Media/Manialinks/Nadeo/CMGame/Components/LoadingSpinner/LoadingSpinner.dds" size="15 15" z-index="1" hidden="1"/>
+<label id="menu-libs-loading-spinner_label-loading" pos="0 -15" halign="center" valign="center2" size="150 15" textfont="GameFontRegular" textcolor="fff" textprefix="$i" textsize="5" z-index="1"/>
+	</framemodel>
+<!-- @Component end component-loadingspinner -->
+
+<!-- @Component start component-trackmania-button -->
+<framemodel id="component-trackmania-button">
+<frame class="Trackmania_Button_frame-button-container" id="Trackmania_Button_frame-align">
+	<frame id="Trackmania_Button_frame-background">
+		<quad id="Trackmania_Button_quad-image" bgcolor="005948" size="40 10" z-index="0" />
+		<quad id="Trackmania_Button_quad-gradient" z-index="1" hidden="1" />
+		<quad id="Trackmania_Button_quad-contour" z-index="2" hidden="1" />
+		<frame id="Trackmania_Button_frame-hitbox-clip">
+			<quad id="ComponentTrackmania_Button_quad-background" class="component-navigation-item-zone" size="40 10" scriptevents="1" />
+		</frame>
+		<quad id="Trackmania_Button_quad-focus-background" z-index="1" size="40 10" bgcolor="005948" hidden="1" />
+	</frame>
+	<frame id="Trackmania_Button_frame-content" z-index="1">
+		<frame id="Trackmania_Button_frame-icon" z-index="1">
+			<quad id="Trackmania_Button_quad-icon" size="10 10" bgcolor="FFF" />
+			<quad id="Trackmania_Button_quad-focus-icon" z-index="1" size="10 10" bgcolor="005948" hidden="1" />
+		</frame>
+		<label id="Trackmania_Button_label-value" pos="20 -5" z-index="10" size="39 9" halign="center" valign="center2" textsize="3" textprefix="$t$i" textfont="GameFontSemiBold" textcolor="FFF" />
+	</frame>
+	<frameinstance id="Trackmania_Button_spinner-loading" modelid="component-loadingspinner" z-index="2" />
+</frame>
+	</framemodel>
+<!-- @Component end component-trackmania-button -->
+
+<!-- @Component start component-cmgame-expendable-button -->
+<framemodel id="component-cmgame-expendable-button">
+<frame id="menu-libs-expendable-button_frame-button-align" class="menu-libs-expendable-button_expendable-button">
+	<frame id="menu-libs-expendable-button_frame-button-align" z-index="0">
+		<quad id="menu-libs-expendable-button_quad-bg-left" />
+		<quad id="menu-libs-expendable-button_quad-bg-center" />
+		<quad id="menu-libs-expendable-button_quad-bg-right" />
+	</frame>
+	<frame id="menu-libs-expendable-button_frame-focus" z-index="1">
+		<quad id="menu-libs-expendable-button_quad-focus-left" opacity="0" />
+		<quad id="menu-libs-expendable-button_quad-focus-center" opacity="0" />
+		<quad id="menu-libs-expendable-button_quad-focus-right" opacity="0" />
+	</frame>
+	<quad id="menu-libs-expendable-button_quad-button-icon" z-index="2" valign="center" />
+	<frame id="menu-libs-expendable-button_frame-button-text-align" z-index="3">
+		<!--
+		We MUST initialize the label with a textprefix value.
+		Otherwise the `TextPrefix` property initialization in the
+		script will be bugged. The latest `TextPrefix` applied
+		will also be applied to all other labels that had their
+		`TextPrefix` updated.
+		-->
+		<label id="menu-libs-expendable-button_label-button-text" valign="center2" textprefix="$z" />
+	</frame>
+
+	<frame id="menu-libs-expendable-button_frame-hitbox-clip" z-index="4" >
+		<quad id="CMGame_ExpendableButton_quad-nav-zone" class="component-navigation-item-zone" z-index="4" halign="center" valign="center" bgcolor="ff0000" scriptevents="1" />
+	</frame>
+</frame>
+	</framemodel>
+<!-- @Component end component-cmgame-expendable-button -->
+
+<!-- @Component start component-trackmania-expendable-button -->
+<framemodel id="component-trackmania-expendable-button">
+		</framemodel>
+<!-- @Component end component-trackmania-expendable-button -->
+
+<!-- @Component start component-checkbox -->
+<framemodel id="component-checkbox">
+<frame id="trackmania-checkbox_frame-checkbox-align" class="trackmania-checkbox_frame-container-checkbox">
+	<quad id="trackmania-checkbox_quad-activation" class="component-navigation-item-zone" halign="center" valign="center" z-index="1" opacity="0" scriptevents="1"/>
+	<quad id="trackmania-checkbox_quad-icon" bgcolor="FFF" halign="center" valign="center" size="7 7" />
+	<label id="trackmania-checkbox_label-checkbox" size="50 10" halign="center" valign="center2" textsize="3" textcolor="FFF" textprefix="$t$i" textfont="GameFontSemiBold"/>
+	<label id="trackmania-checkbox_label-mirror-checkbox" size="50 10" halign="center" valign="center2" textsize="3" textcolor="FFF" textprefix="$t$i" textfont="GameFontSemiBold"/>
+</frame>
+	</framemodel>
+<!-- @Component end component-checkbox -->
+
+<!-- @Component start component-trackmania-pop-up-background-2 -->
+<framemodel id="component-trackmania-pop-up-background-2">
+<frame class="trackmania-pop-up-background-2_pop-up-background">
+	<quad id="trackmania-pop-up-background-2_quad-dimmer" z-index="0" size="320 180" halign="center" valign="center" fullscreen="1" scriptevents="1" />
+	<frame id="trackmania-pop-up-background-2_frame-background" z-index="2">
+		<frame id="trackmania-pop-up-background-2_frame-align">
+			<quad id="trackmania-pop-up-background-2_quad-background" z-index="0" image="file://Media/Manialinks/Nadeo/Trackmania/Menus/PopUp/Common_MainPopup.dds" opacity="0.95"/>
+			<quad id="trackmania-pop-up-background-2_quad-header-image" z-index="1" halign="right" alphamask="file://Media/Manialinks/Nadeo/Trackmania/Menus/PopUp/Common_MainPopup_Header_Mask.dds" />
+			<quad id="trackmania-pop-up-background-2_quad-header-gradient" z-index="2" halign="right" image="file://Media/Manialinks/Nadeo/Trackmania/Menus/PopUp/Common_MainPopup_Header_Gradient.dds" />
+			<quad id="trackmania-pop-up-background-2_button-leave" z-index="3" image="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/256x256/Icones_256_icon_cross_oblique.dds" size="7 7" halign="center" valign="center" colorize="FFF" scriptevents="1" />
+			<frame id="trackmania-pop-up-background-2_frame-background-hitbox" z-index="2">
+				<quad id="trackmania-pop-up-background-2_quad-background-hitbox" rot="10." halign="right" scriptevents="1" />
+			</frame>
+		</frame>
+	</frame>
+</frame>
+	</framemodel>
+<!-- @Component end component-trackmania-pop-up-background-2 -->
+
+<!-- @Component start menu-libs-scroll -->
+<framemodel id="menu-libs-scroll">
+<frame class="menu-libs-scroll_scroll-widgets">
+	<frameinstance id="menu-libs-scroll_frame-loading-spinner" modelid="component-loadingspinner" z-index="3"/>
+	<label id="menu-libs-scroll_label-scroll-indicator" halign="center" valign="bottom" textsize="8" text="" hidden="1" scriptevents="1" />
+	<quad id="menu-libs-scroll_quad-scroll-indicator" halign="center" valign="bottom" size="8 8" hidden="1" scriptevents="1" />
+	<frame id="menu-libs-scroll_frame-scrollbar" hidden="1">
+		<frame id="menu-libs-scroll_frame-scrollbar-during-scroll">
+			<frame id="menu-libs-scroll_frame-scrollbar-bg" z-index="0">
+				<quad id="menu-libs-scroll_quad-top" class="menu-libs-scroll_scrollbar-bg" halign="center" rot="180" opacity="0.3" colorize="ffffff" image="file://Media/Manialinks/Nadeo/CMGame/Components/Scroll//ScrollBar_TopBottom.dds" scriptevents="1" />
+				<quad id="menu-libs-scroll_quad-center" class="menu-libs-scroll_scrollbar-bg" halign="center" opacity="0.3" colorize="ffffff" image="file://Media/Manialinks/Nadeo/CMGame/Components/Scroll//ScrollBar_Center.dds" scriptevents="1" />
+				<quad id="menu-libs-scroll_quad-bottom" class="menu-libs-scroll_scrollbar-bg" halign="center" opacity="0.3" colorize="ffffff" image="file://Media/Manialinks/Nadeo/CMGame/Components/Scroll//ScrollBar_TopBottom.dds" scriptevents="1" />
+			</frame>
+			<frame id="menu-libs-scroll_frame-scrollbar-fg" z-index="1">
+				<quad id="menu-libs-scroll_quad-top" class="menu-libs-scroll_scrollbar-fg" halign="center" rot="180" opacity="0.8" colorize="ffffff" image="file://Media/Manialinks/Nadeo/CMGame/Components/Scroll//ScrollBar_TopBottom.dds" scriptevents="1" />
+				<quad id="menu-libs-scroll_quad-center" class="menu-libs-scroll_scrollbar-fg" halign="center" opacity="0.8" colorize="ffffff" image="file://Media/Manialinks/Nadeo/CMGame/Components/Scroll//ScrollBar_Center.dds" scriptevents="1" />
+				<quad id="menu-libs-scroll_quad-bottom" class="menu-libs-scroll_scrollbar-fg" halign="center" opacity="0.8" colorize="ffffff" image="file://Media/Manialinks/Nadeo/CMGame/Components/Scroll//ScrollBar_TopBottom.dds" scriptevents="1" />
+			</frame>
+		</frame>
+	</frame>
+</frame>
+	</framemodel>
+<!-- @Component end menu-libs-scroll -->
+
+<!-- @Component start component-cmgame-selector -->
+<framemodel id="component-cmgame-selector">
+<frame id="menu-libs-selector_frame-selector-align" class="menu-libs-selector_selector">
+	<frame id="menu-libs-selector_frame-navigation-container" class="component-navigation-container" z-index="1" >
+		<quad id="CMGame_Selector_quad-nav-zone" class="component-navigation-item-zone" halign="center" valign="center" bgcolor="ff0000" scriptevents="1" z-index="10"/>
+		<frame
+			id="menu-libs-selector_frame-selector-focus"
+			class="component-navigation-item"
+			data-nav-group="CMGame_Selector_NavGroup"
+			data-nav-inputs="left;right"
+			data-nav-targets="_;_"
+		>
+			<quad id="menu-libs-selector_button-previous" class="CMGame_Selector_Class_ChoiceButton" image="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_LEFT_OBLIQUE.dds" colorize="FFFFFF" opacity="0.6" halign="left" valign="center" scriptevents="1" z-index="0"/>
+			<label id="menu-libs-selector_label-value" pos="0 -0.3" textfont="GameFontRegular" textcolor="FFFFFF" textprefix="$i$t" opacity="0.6" halign="center" valign="center2" z-index="1"/>
+			<quad id="menu-libs-selector_button-next" class="CMGame_Selector_Class_ChoiceButton" image="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_RIGHT_OBLIQUE.dds" colorize="FFFFFF" opacity="0.6" halign="right" valign="center" scriptevents="1" z-index="0"/>
+		</frame>
+	</frame>
+</frame>
+	</framemodel>
+<!-- @Component end component-cmgame-selector -->
+
+<!-- @Component start component-textfield -->
+<framemodel id="component-textfield">
+<stylesheet>
+	<style class="cmgame-text-field_quad-default" halign="center" valign="center"/>
+	<style class="cmgame-text-field_text-default" halign="center" valign="center2" textfont="GameFontSemiBold" textsize="3" textcolor="FFF"/>
+</stylesheet>
+
+<frame id="cmgame-text-field_frame-text-field-align" class="cmgame-text-field_frame-container-text-field">
+	<quad id="CMGame_TextField_quad-activation" class="component-navigation-item-zone cmgame-text-field_quad-default" scriptevents="1" opacity="0" z-index="10"/>
+	<entry id="cmgame-text-field_entry-label" size="110 10" class="cmgame-text-field_text-default" focusareacolor1="00000000" focusareacolor2="00000000" textsize="5"/>
+	<textedit id="cmgame-text-field_textedit-label" size="110 28" pos="0 -1.5" class="cmgame-text-field_text-default" focusareacolor1="00000000" focusareacolor2="00000000" textsize="5." linespacing="1.1" hidden="1"/>
+	<frameinstance id="cmgame-text-field_button-background" modelid="component-cmgame-expendable-button" data-styles="component-trackmania-expendable-button-style-stack component-trackmania-expendable-button-style-align-center" z-index="-1"/>
+</frame>
+	</framemodel>
+<!-- @Component end component-textfield -->
+
+<!-- @Component start component-popupmultichoice -->
+<framemodel id="component-popupmultichoice">
+<frame class="trackmania-pop-up-multi-choice_popupmultichoice">
+	<frame z-index="1" id="trackmania-pop-up-multi-choice_navcontainer" class="component-navigation-container">
+		<frameinstance id="trackmania-pop-up-multi-choice_frame-background" modelid="component-trackmania-pop-up-background-2" data-styles="secondary-pop-up-with-header" z-index="0"/>
+		<label id="trackmania-pop-up-multi-choice_label-title" halign="center" valign="center2" textcolor="FFFFFF" z-index="1"/>
+		<frame id="trackmania-pop-up-multi-choice_frame-description-container" class="component-grid-container" z-index="1">
+
+			<label id="trackmania-pop-up-multi-choice_label-description-line-0" class="component-grid-element" data-grid-row="0" textprefix="$z" halign="center" valign="center2" autonewline="1" z-index="1" hidden="1"/>
+
+			<label id="trackmania-pop-up-multi-choice_label-description-line-1" class="component-grid-element" data-grid-row="1" textprefix="$z" halign="center" valign="center2" autonewline="1" z-index="1" hidden="1"/>
+
+			<label id="trackmania-pop-up-multi-choice_label-description-line-2" class="component-grid-element" data-grid-row="2" textprefix="$z" halign="center" valign="center2" autonewline="1" z-index="1" hidden="1"/>
+
+			<label id="trackmania-pop-up-multi-choice_label-description-line-3" class="component-grid-element" data-grid-row="3" textprefix="$z" halign="center" valign="center2" autonewline="1" z-index="1" hidden="1"/>
+
+		</frame>
+		<frame id="trackmania-pop-up-multi-choice_frame-description-debug" z-index="2" hidden="1">
+
+			<quad id="trackmania-pop-up-multi-choice_quad-description-debug-0" bgcolor="FF0000" halign="center" valign="center" opacity="0.3" hidden="1"/>
+
+			<quad id="trackmania-pop-up-multi-choice_quad-description-debug-1" bgcolor="FF0000" halign="center" valign="center" opacity="0.3" hidden="1"/>
+
+			<quad id="trackmania-pop-up-multi-choice_quad-description-debug-2" bgcolor="FF0000" halign="center" valign="center" opacity="0.3" hidden="1"/>
+
+			<quad id="trackmania-pop-up-multi-choice_quad-description-debug-3" bgcolor="FF0000" halign="center" valign="center" opacity="0.3" hidden="1"/>
+
+		</frame>
+
+		<frame id="trackmania-pop-up-multi-choice_frame-scroll-view" z-index="2">
+			<frameinstance modelid="menu-libs-scroll" data-scroll-parent="trackmania-pop-up-multi-choice_frame-scroll-choices" z-index="1" />
+			<frame
+				id="trackmania-pop-up-multi-choice_frame-scroll-choices"
+				pos="-51.1498 19."
+				class="menu-libs-scroll-window component-navigation-item trackmania-pop-up-multi-choice_navigation"
+				data-pager-page-size="10"
+				data-elements-per-line="1"
+				data-element-size="100. 10."
+				data-margin-size="0. 0."
+				data-window-size="100. 50."
+				data-header-height="0."
+				data-footer-height="0."
+				data-scroll-indicator-x-offset="-5."
+				data-scroll-indicator-y-offset="-9."
+				data-scroll-indicator-image="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_BOTTOM_OBLIQUE.dds"
+				data-scroll-indicator-colorize="FFFFFF"
+				data-scroll-indicator-size="10"
+				data-scrollbar-xoffset="10."
+				data-scrollpadding="17.5"
+				data-scroll-locked="1"
+				data-skew="-10."
+				data-skew-valign="1"
+				data-nav-group="navgroup-component-popupmultichoice"
+			>
+				<quad z-index="-1" scriptevents="1" class="menu-libs-scroll-event" />
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			<frame class="menu-libs-scroll-element" hidden="1">
+				<frameinstance id="trackmania-pop-up-multi-choice_button-choice" modelid="component-cmgame-expendable-button" pos="50. 0" z-index="0"/>
+				<quad	id="trackmania-pop-up-multi-choice_quad-activation" pos="50. 0" size="100. 9." class="menu-libs-scroll-activation-zone" opacity="0" halign="center" scriptevents="1" z-index="1"/>
+			</frame>
+
+			</frame>
+		</frame>
+
+		<frameinstance
+			id="trackmania-pop-up-multi-choice_button-first-choice" z-index="2"
+			modelid="component-cmgame-expendable-button"
+			class="component-navigation-item trackmania-pop-up-multi-choice_navigation"
+			data-nav-inputs="select;cancel;right"
+			data-nav-targets="_;_;trackmania-pop-up-multi-choice_button-second-choice"
+			data-nav-group="navgroup-component-popupmultichoice"
+			data-nav-zone="CMGame_ExpendableButton_quad-nav-zone"
+		/>
+		<frameinstance
+			id="trackmania-pop-up-multi-choice_button-second-choice" z-index="2"
+			modelid="component-cmgame-expendable-button"
+			class="component-navigation-item trackmania-pop-up-multi-choice_navigation"
+			data-nav-inputs="select;cancel;left"
+			data-nav-targets="_;_;trackmania-pop-up-multi-choice_button-first-choice"
+			data-nav-group="navgroup-component-popupmultichoice"
+			data-nav-zone="CMGame_ExpendableButton_quad-nav-zone"
+		/>
+	</frame>
+</frame>
+	</framemodel>
+<!-- @Component end component-popupmultichoice -->
+
+<!-- @Component start race-scores-table -->
+<framemodel id="race-scores-table">
+		</framemodel>
+<!-- @Component end race-scores-table -->
+
+<stylesheet>
+	<style class="text-semibold" halign="center" valign="center2" textfont="GameFontSemiBold" textprefix="$i$t" textcolor="FFFFFF"/>
+	<style class="text-extrabold" halign="center" valign="center2" textfont="GameFontExtraBold" textprefix="$i$t" textcolor="FFFFFF"/>
+</stylesheet>
+
+<!-- Pop-ups -->
+<frameinstance
+	id="popupmultichoice-rules" z-index="10"
+	modelid="component-popupmultichoice"
+	data-title="Welcome to the Cup of the Day"
+	data-description="[{&quot;TextFitLabelEnabled&quot;:true,&quot;TextFontSize&quot;:2.5,&quot;TextFont&quot;:&quot;GameFontSemiBold&quot;,&quot;TextPrefix&quot;:&quot;$t$i&quot;,&quot;TextValue&quot;:&quot;Race for 15 minutes on today&apos;s track. You will be able to join the knockout phase afterwards and earn even more trophies.\nYou can see your global rank among all servers on the left of your screen.&quot;,&quot;TextSize&quot;:[130,30],&quot;TextColor&quot;:[1,1,1]}]"
+	hidden="1"
+/>
+
+<!-- Frame global -->
+<frame id="frame-global" size="320 180" halign="center" valign="center" z-index="-2" hidden="1">
+	<frame  id="COTDQualifications_QualificationsProgress" class="component-cmgame-uimodules-module" pos="-133. 0." scale="1." hidden="0" data-customizable-module-enabled="1"  z-index="1">
+		<frame id="frame-content">
+			<frameinstance
+				id="button-hide" pos="-27. 32.5" z-index="3"
+				modelid="component-trackmania-button"
+				class="component-navigation-item"
+				data-size="8 8"
+				data-iconsize="8 8"
+				data-bgcolor="000514"
+				data-focuscolor="000514"
+				data-iconcolortype="1"
+				data-iconcolor="FFFFFF"
+				data-iconfocuscolor="FFFFFF"
+				data-icon="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_LEFT.dds"
+				data-iconfocus="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_LEFT.dds"
+				data-opacityunfocus=".6"
+				data-iconopacityunfocus=".3"
+				data-halign="left" data-valign="bottom"
+				data-nav-inputs="select;cancel"
+				data-nav-targets="_;_"
+				data-nav-group="navgroup-cotd-qualifications-side"
+				data-nav-zone="ComponentTrackmania_Button_quad-background"
+				hidden="True"
+			/>
+
+			<!-- Hide the content of this frame with the 'button-hide' -->
+			<frame id="frame-hideable-content">
+				<frame id="frame-content-side">
+					<quad id="quad_bg" size="54. 63." bgcolor="000514" halign="center" valign="center" opacity="0.6" z-index="0"/>
+					<label id="label-title" pos="-4. 29.61" size="42. 8." class="text-extrabold" text="Cup of the Day" textsize="3.5" valign="top" z-index="3"/>
+					<frameinstance
+						id="button-rules" pos="27. 31.5" z-index="4"
+						modelid="component-trackmania-button"
+						class="component-navigation-item"
+						data-opacityunfocus="0.6"
+						data-size="8. 8."
+						data-labelsize="8. 8."
+						data-bgcolor="000514"
+						data-focuscolor="009B5F"
+						data-textfont="GameFontExtraBold"
+						data-textcolor="FFFFFF"
+						data-textopacityunfocus="0.6"
+						data-textitalicslope="0.1"
+						data-textypos="-0.57"
+						data-textsize="5"
+						data-text="?"
+						data-halign="right" data-valign="top"
+						data-nav-inputs="select;cancel"
+						data-nav-targets="_;_"
+						data-nav-group="navgroup-cotd-qualifications-side"
+						data-nav-zone="ComponentTrackmania_Button_quad-background"
+						hidden="False"
+					/>
+					<label id="label-result" class="text-semibold" pos="0 16" size="43.2 5" textcolor="6EFAA0" textsize="2" textprefix="$i" z-index="3"/>
+					<label id="label-trophies" class="text-semibold" pos="0 12" size="43.2 5" textcolor="6EFAA0" textsize="2" textprefix="$i" z-index="3"/>
+					<quad id="quad-result" halign="center" valign="center" pos="0 2" size="15 15" z-index="3" autoscale="0"/>
+					<label id="label-message" class="text-semibold" pos="0 -4" size="43.2 40" textcolor="6EFAA0" textsize="2" textprefix="$i" autonewline="1" maxline="4" z-index="3"/>
+					<label id="label-timer" class="text-semibold" pos="0 -17" size="27. 12" textcolor="6EFAA0" textsize="2" textprefix="$i" z-index="3"/>
+					<label id="label-auto-join" class="text-semibold" pos="0 -23" size="27. 12" textcolor="6EFAA0" textsize="2" textprefix="$i" z-index="3"/>
+					<frameinstance pos="0 -23" id="frame-spinner" modelid="component-loadingspinner" z-index="3" scale="0.65"/>
+					<frameinstance
+						id="button-join" pos="-54. -32.5" z-index="5"
+						modelid="component-cmgame-expendable-button"
+						class="component-navigation-item"
+						data-text="Join"
+						data-text-offset="2.5 -0.55"
+						data-width="54." data-height="10"
+						data-styles="component-trackmania-expendable-button-style-page-next-animated component-trackmania-expendable-button-style-hud"
+						data-background-image-right="file://Media/Manialinks/Nadeo/CMGame/Utils/ButtonStyles/Rounded/Button_End_ExtraRounded_Vertical.dds"
+						data-background-colormode-right="1"
+						data-background-size-right="128 256"
+						data-icon-offset="2.5 0"
+						data-halign="center" data-valign="top"
+						data-nav-inputs="select;cancel"
+						data-nav-targets="_;_"
+						data-nav-group="navgroup-cotd-qualifications-side"
+						data-nav-zone="CMGame_ExpendableButton_quad-nav-zone"
+					/>
+				</frame>
+			</frame>
+		</frame>
+	</frame>
+
+	<!-- Join match pop-up (on consoles only) -->
+	<frame
+		id="frame-content-center"
+		class="component-navigation-item"
+		z-index="2"
+		data-nav-inputs="cancel;appmenu"
+		data-nav-targets="_;_"
+		data-nav-group="navgroup-cotd-qualifications-showingamemenu"
+		data-nav-selected="1"
+	>
+		<quad z-index="0" size="180. 103.235" halign="center" valign="center" image="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_Popup.dds" />
+		<quad id="quad-popup-background" z-index="0" size="180. 103.235" halign="center" valign="center" image="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_Popup.dds" />
+		<quad id="quad-popup-background-buttons" z-index="0" size="182. 104.382" halign="center" valign="center" image="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_PopupWithButtons.dds" opacity="0" hidden="1" />
+		<frame pos="8.82854 50.0691" z-index="1">
+			<label id="label-title" pos="-2.11592 -12." size="153. 10" halign="center" valign="center2" textsize="8." text="Cup of the Day" class="text-extrabold" />
+			<label id="label-rank" pos="-4.93716 -28." size="153. 10" halign="center" valign="center2" textsize="4" class="text-extrabold" />
+			<label id="label-trophies" pos="-6.34777 -36." size="153. 10" halign="center" valign="center2" textsize="4" class="text-extrabold" />
+			<frame pos="-9.52166 -54.">
+				<quad z-index="0" size="35. 20.1064" halign="center" valign="center" colorize="000514" opacity="0.5" image="file://Media/Manialinks/Nadeo/Trackmania/Modes/Royal/hud_royal_scoretable_team_icon_bg.dds" />
+				<quad id="quad-trophies" z-index="1" size="26.95 17.2915" halign="center" valign="center" keepratio="fit" />
+			</frame>
+			<label id="label-message" pos="-13.4009 -76." size="153. 10" halign="center" valign="center2" maxline="3" class="text-extrabold" />
+			<frameinstance id="frame-spinner" modelid="component-loadingspinner" pos="-16.2221 -92." scale="0.65" />
+			<label id="label-auto-join" pos="-16.2221 -92." size="153. 10" halign="center" valign="center2" class="text-extrabold" />
+		</frame>
+		<frame pos="-8.07663 -50.6254" z-index="2">
+			<frameinstance
+				modelid="component-trackmania-button" id="button-left"
+				pos="2.3 0" z-index="3"
+				class="component-navigation-item"
+				data-text="|Verb|Stay"
+				data-size="87.8552 17.571"
+				data-labelsize="87.8552 17.571"
+				data-textxpos="0.5"
+				data-opacityunfocus=".5"
+				data-image="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_SmallPopup_ButtonLeft.dds"
+				data-imagefocus="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_SmallPopup_ButtonLeft.dds"
+				data-bgcolor="003228"
+				data-focuscolor="003228"
+				data-textcolor="6EFAA0"
+				data-textfocuscolor="6EFAA0"
+				data-iconcolortype="1"
+				data-iconcolor="6EFAA0"
+				data-iconfocuscolor="6EFAA0"
+				data-icon="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_LEFT_OBLIQUE.dds"
+				data-iconfocus="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_LEFT_OBLIQUE.dds"
+				data-iconxpos=".15"
+				data-iconypos="-.5"
+				data-textsize="5"
+				data-textopacityunfocus=".5"
+				data-iconopacityunfocus=".5"
+				data-textfont="GameFontExtraBold"
+				data-textitalicslope=".2"
+				data-halign="right"
+				data-nav-inputs="select;right"
+				data-nav-targets="_;button-right"
+				data-nav-group="navgroup-cotd-qualifications-center"
+				data-nav-zone="ComponentTrackmania_Button_quad-background"
+			/>
+			<frameinstance
+				modelid="component-trackmania-button" id="button-right"
+				pos="-1.2 0" z-index="3"
+				class="component-navigation-item"
+				data-text="Join"
+				data-size="83.8003 17.571"
+				data-labelsize="83.8003 17.571"
+				data-textxpos="0.5"
+				data-opacityunfocus=".5"
+				data-image="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_SmallPopup_ButtonRight.dds"
+				data-imagefocus="file://Media/Manialinks/Nadeo/Trackmania/Modes/Knockout/TM_UI_HUD_02_KnockOut_SmallPopup_ButtonRight.dds"
+				data-bgcolor="003228"
+				data-focuscolor="003228"
+				data-textcolor="6EFAA0"
+				data-textfocuscolor="6EFAA0"
+				data-iconcolortype="1"
+				data-iconcolor="6EFAA0"
+				data-iconfocuscolor="6EFAA0"
+				data-icon="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_RIGHT_OBLIQUE.dds"
+				data-iconfocus="file://Media/Manialinks/Nadeo/CMGame/Utils/Icons/128x128/ICON_ARROW_RIGHT_OBLIQUE.dds"
+				data-iconxpos=".85"
+				data-iconypos="-.5"
+				data-textsize="5"
+				data-textopacityunfocus=".5"
+				data-iconopacityunfocus=".5"
+				data-textfont="GameFontExtraBold"
+				data-textitalicslope=".2"
+				data-halign="left"
+				data-nav-inputs="select;left"
+				data-nav-targets="_;button-left"
+				data-nav-group="navgroup-cotd-qualifications-center"
+				data-nav-zone="ComponentTrackmania_Button_quad-background"
+			/>
+		</frame>
+	</frame>
+</frame>
+
+<script><!--
+
+// @Component start component-cmgame-uimodules
+// /*
+
+#Include "Libs/Nadeo/CMGame/Utils/Tools.Script.txt" as Component_CMGame_UIModules_Tools
+#Include "Libs/Nadeo/CMGame/Modes/UIModules_Common.Script.txt" as Component_CMGame_UIModules_UIModules_Common
+
+#Struct Component_CMGame_UIModules_K_Module {
+	CMlControl Control;
+	Boolean IsCustom;
+	Component_CMGame_UIModules_UIModules_Common::K_ModuleProperties DefaultProperties;
+}
+
+// */
+// @Component end component-cmgame-uimodules
+
+// @Component start share-menu-navigation
+// /*
+
+#Include "Libs/Nadeo/CMGame/Menus/ShareMenuNavigation_ML.Script.txt" as ShareMenuNavigation_ShareMenuNavigation
+
+// */
+// @Component end share-menu-navigation
+
+// @Component start component-navigation
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/Navigation.Script.txt" as ComponentNavigation_ComponentNavigation
+
+// */
+// @Component end component-navigation
+
+// @Component start component-loadingspinner
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/LoadingSpinner.Script.txt" as CMGame_LoadingSpinner
+
+// */
+// @Component end component-loadingspinner
+
+// @Component start component-trackmania-button
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/Button.Script.txt" as Trackmania_Button
+
+// */
+// @Component end component-trackmania-button
+
+// @Component start component-cmgame-expendable-button
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/ExpendableButtonBase.Script.txt" as CMGame_ExpendableButton
+
+// */
+// @Component end component-cmgame-expendable-button
+
+// @Component start component-trackmania-expendable-button
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/ExpendableButton.Script.txt" as CMGame_ExpendableButton
+
+// */
+// @Component end component-trackmania-expendable-button
+
+// @Component start component-checkbox
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/Checkbox.Script.txt" as Trackmania_Checkbox
+
+// */
+// @Component end component-checkbox
+
+// @Component start component-trackmania-pop-up-background-2
+// /*
+
+#Include "Libs/Nadeo/Trackmania/Components/PopUpBackground2.Script.txt" as Trackmania_PopUpBackground2
+
+// */
+// @Component end component-trackmania-pop-up-background-2
+
+// @Component start menu-libs-scroll
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/Scroll.Script.txt" as CMGame_Scroll
+
+// */
+// @Component end menu-libs-scroll
+
+// @Component start component-cmgame-selector
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/Selector.Script.txt" as CMGame_Selector
+
+// */
+// @Component end component-cmgame-selector
+
+// @Component start component-textfield
+// /*
+
+#Include "Libs/Nadeo/CMGame/Components/TextField.Script.txt" as CMGame_TextField
+
+// */
+// @Component end component-textfield
+
+// @Component start component-popupmultichoice
+// /*
+
+#Include "Libs/Nadeo/Trackmania/Components/PopUpMultiChoice.Script.txt" as Trackmania_PopUpMultiChoice
+
+// */
+// @Component end component-popupmultichoice
+
+// @Component start race-scores-table
+// /*
+
+
+// */
+// @Component end race-scores-table
+
+#Include "TextLib" as TL
+#Include "Libs/Nadeo/CMGame/Utils/Tools.Script.txt" as Tools
+#Include "Libs/Nadeo/CMGame/Utils/Icons.Script.txt" as Icons
+#Include "Libs/Nadeo/Trackmania/MainMenu/Constants.Script.txt" as MenuConst
+#Include "Libs/Nadeo/Trackmania/Modes/COTDQualifications/Constants.Script.txt" as COTDConst
+#Include "Libs/Nadeo/Trackmania/Modes/COTDQualifications/NetShare.Script.txt" as NetShare
+
+#Struct K_ContentControls {
+	CMlLabel Label_Result;
+	CMlLabel Label_Trophies;
+	CMlQuad Quad_Result;
+	CMlLabel Label_Message;
+	CMlFrame Frame_Spinner;
+	CMlLabel Label_AutoJoin;
+}
+
+#Struct K_Controls {
+	K_ContentControls ContentSide;
+	K_ContentControls ContentCenter;
+	CMlFrame Frame_Global;
+	CMlFrame Frame_Content;
+	CMlFrame Frame_ContentSide;
+	CMlFrame Frame_ContentCenter;
+	CMlFrame Frame_HideableContent;
+	CMlFrame Frame_Rules;
+	CMlLabel Label_Timer;
+	CMlFrame Button_Hide;
+	CMlFrame Button_Help;
+	CMlFrame Button_Join;
+	CMlFrame Button_Left;
+	CMlFrame Button_Right;
+	CMlFrame PopUpMultiChoice_Rules;
+	CMlQuad Quad_PopUpBackground;
+	CMlQuad Quad_PopUpBackgroundButtons;
+}
+
+#Struct K_State {
+	K_Controls Controls;
+	Boolean DisplayModule;
+	Integer CurrentState;
+	Boolean NeedStateUpdate;
+	Boolean NeedOffset;
+	Text JoinLink;
+	Integer ServerReadyTime;
+	Boolean ServerIsReady;
+	Integer CurrentRank;
+	Boolean CanDisplayPopUp;
+	Boolean ScoresTableIsDisplayed;
+	Boolean PopUpIsVisible;
+	Boolean ButtonClicked;
+	Boolean CanAutoJoin;
+}
+
+#Const C_State_Null K_State {
+	Controls = K_Controls {},
+	DisplayModule = False,
+	CurrentState = 0, //< C_State_Hidden
+	NeedOffset = False,
+	NeedStateUpdate = True,
+	JoinLink = "",
+	CurrentRank = -1,
+	CanDisplayPopUp = False,
+	ScoresTableIsDisplayed = False,
+	PopUpIsVisible = False,
+	ButtonClicked = False,
+	CanAutoJoin = True
+}
+
+#Const C_State_Hidden 0
+#Const C_State_BeforeMatch 1
+#Const C_State_MatchStarted_NoResult 2
+#Const C_State_MatchStarted_Registering 3
+#Const C_State_MatchOver_WaitJoinLink 4
+#Const C_State_MatchOver_WaitServerReady 5
+#Const C_State_MatchOver_JoinLinkReady 6
+#Const C_State_MatchOver_RegistrationsOver 7
+#Const C_State_MatchOver_MatchNotJoinableAnymore 8
+#Const C_State_Synchronizing 9
+
+#Const C_NavGroup_Side "navgroup-cotd-qualifications-side"
+#Const C_NavGroup_Center "navgroup-cotd-qualifications-center"
+#Const C_NavGroup_ShowInGameMenu "navgroup-cotd-qualifications-showingamemenu"
+
+#Const C_Text_Result "Qualifier rank: %1"
+#Const C_Text_ResultTrophy "You earned %1 Trophy %2"
+#Const C_Text_BeforeMatch "The Cup of the Day will start soon."
+#Const C_Text_MatchStarted_NoResult "Finish the track once before the end of the qualifications to register for the cup."
+#Const C_Text_MatchStarted_Registering "Registering for the Cup of the Day..."
+#Const C_Text_MatchOver_WaitJoinLink "Waiting for your match."
+#Const C_Text_MatchOver_WaitServerReady "Starting server."
+#Const C_Text_MatchOver_JoinLinkReady "Your next match is ready."
+#Const C_Text_MatchOver_JoinLinkReadySideFirstParty "Your next match is ready. Join from the pause menu."
+#Const C_Text_MatchOver_RegistrationsOver "Registration for today's cup has finished, come back tomorrow!"
+#Const C_Text_MatchOver_MatchNotJoinableAnymore "Today's matches have already started, come back tomorrow!"
+#Const C_Text_Synchronizing "|COTD player record|Synchronization"
+
+// Now we receive the joinlink to the knockout server only once we are sure it is ready and joinable.
+// We don't need to wait before using the joinlink anymore. Before we had to add a 30 seconds delay.
+// See: /trackmania-next/tmnext/-/issues/5073#note_263334
+#Const C_JoinLinkValidDelay 0
+#Const C_InputPriority 1
+#Const C_PlatformIsFromFirstParty False
+
+
+
+// @Component start component-cmgame-uimodules
+// /*
+
+Component_CMGame_UIModules_K_Module[Text] Component_CMGame_UIModules_Private_UpdateModulesProperties(Component_CMGame_UIModules_K_Module[Text] _UIModules, Component_CMGame_UIModules_UIModules_Common::K_ModuleProperties[Text] _ModulesProperties) {
+	declare Component_CMGame_UIModules_K_Module[Text] UIModules = _UIModules;
+	foreach (ModuleId => Module in _UIModules) {
+		// Module properties are customized
+		if (_ModulesProperties.existskey(ModuleId)) {
+			declare Component_CMGame_UIModules_UIModules_Common::K_ModuleProperties ModuleProperties = _ModulesProperties[ModuleId];
+			Module.Control.RelativePosition_V3 = ModuleProperties.Position;
+			Module.Control.RelativeScale = ModuleProperties.Scale;
+			Module.Control.Visible = ModuleProperties.Visible;
+			UIModules[ModuleId].IsCustom = True;
+		}
+		// Module properties are not customized anymore
+		else if (Module.IsCustom) {
+			Module.Control.RelativePosition_V3 = Module.DefaultProperties.Position;
+			Module.Control.RelativeScale = Module.DefaultProperties.Scale;
+			Module.Control.Visible = Module.DefaultProperties.Visible;
+			UIModules[ModuleId].IsCustom = False;
+		}
+	}
+	return UIModules;
+}
+
+Component_CMGame_UIModules_K_Module[Text] Component_CMGame_UIModules_Private_Initialize() {
+	// Find UI modules controls
+	declare Component_CMGame_UIModules_K_Module[Text] Component_CMGame_UIModules_UIModules;
+	Page.GetClassChildren("component-cmgame-uimodules-module", Page.MainFrame, True);
+	foreach (Control in Page.GetClassChildren_Result) {
+		declare TrueControlHandle = Control;
+		assert(TrueControlHandle.ControlId != "", "[UIModules] A UI module CMlControl must have an id");
+		assert(!Component_CMGame_UIModules_UIModules.existskey(TrueControlHandle.ControlId), "[UIModules] Two UI modules CMlControl cannot share the same id '"^TrueControlHandle.ControlId^"'");
+		if (
+			TrueControlHandle.DataAttributeExists("customizable-module-enabled") &&
+			Component_CMGame_UIModules_Tools::TextToBoolean(TrueControlHandle.DataAttributeGet("customizable-module-enabled"))
+		) {
+			Component_CMGame_UIModules_UIModules[TrueControlHandle.ControlId] = Component_CMGame_UIModules_K_Module {
+				Control = TrueControlHandle,
+				IsCustom = False,
+				DefaultProperties = Component_CMGame_UIModules_UIModules_Common::K_ModuleProperties {
+					Position = TrueControlHandle.RelativePosition_V3,
+					Scale = TrueControlHandle.RelativeScale,
+					Visible = TrueControlHandle.Visible
+				}
+			};
+		}
+	}
+	return Component_CMGame_UIModules_UIModules;
+}
+
+***MainInit***
+***
+declare netread Component_CMGame_UIModules_UIModules_Common::K_ModuleProperties[Text] Net_LibUI3_CustomizableModule_Properties for Teams[0];
+declare netread Integer Net_LibUI3_CustomizableModule_PropertiesUpdate for Teams[0];
+
+declare Component_CMGame_UIModules_K_Module[Text] Component_CMGame_UIModules_UIModules;
+***
+
+***MainStart***
+***
+declare Integer ModulesPropertiesUpdate = Net_LibUI3_CustomizableModule_PropertiesUpdate;
+
+Component_CMGame_UIModules_UIModules = Component_CMGame_UIModules_Private_Initialize();
+Component_CMGame_UIModules_UIModules = Component_CMGame_UIModules_Private_UpdateModulesProperties(Component_CMGame_UIModules_UIModules, Net_LibUI3_CustomizableModule_Properties);
+***
+
+***MainLoop***
+***
+if (ModulesPropertiesUpdate != Net_LibUI3_CustomizableModule_PropertiesUpdate) {
+	ModulesPropertiesUpdate = Net_LibUI3_CustomizableModule_PropertiesUpdate;
+	Component_CMGame_UIModules_UIModules = Component_CMGame_UIModules_Private_UpdateModulesProperties(Component_CMGame_UIModules_UIModules, Net_LibUI3_CustomizableModule_Properties);
+}
+***
+
+// */
+// @Component end component-cmgame-uimodules
+
+// @Component start share-menu-navigation
+// /*
+
+***MainLoop***
+***
+ShareMenuNavigation_ShareMenuNavigation::MainLoop(This);
+***
+
+// */
+// @Component end share-menu-navigation
+
+// @Component start component-navigation
+// /*
+
+***MainInit***
+***
+ComponentNavigation_ComponentNavigation::MainInit(This);
+***
+
+***MainLoop***
+***
+ComponentNavigation_ComponentNavigation::MainLoop(This);
+***
+
+// */
+// @Component end component-navigation
+
+// @Component start component-loadingspinner
+// /*
+
+***MainInit***
+***
+CMGame_LoadingSpinner::MainInit(This);
+***
+
+***MainLoop***
+***
+CMGame_LoadingSpinner::MainLoop(This);
+***
+
+// */
+// @Component end component-loadingspinner
+
+// @Component start component-trackmania-button
+// /*
+
+***MainInit***
+***
+Trackmania_Button::MainInit(This);
+***
+
+***MainLoop***
+***
+Trackmania_Button::MainLoop(This);
+***
+
+// */
+// @Component end component-trackmania-button
+
+// @Component start component-cmgame-expendable-button
+// /*
+
+***MainInit***
+***
+CMGame_ExpendableButton::MainInit(This);
+***
+
+***MainStart***
+***
+CMGame_ExpendableButton::MainStart(This);
+***
+
+***MainLoop***
+***
+CMGame_ExpendableButton::MainLoop(This);
+***
+
+// */
+// @Component end component-cmgame-expendable-button
+
+// @Component start component-trackmania-expendable-button
+// /*
+
+***MainInit***
+***
+CMGame_ExpendableButton::Trackmania_MainInit(This);
+***
+
+// */
+// @Component end component-trackmania-expendable-button
+
+// @Component start component-checkbox
+// /*
+
+***MainInit***
+***
+Trackmania_Checkbox::MainInit(This);
+***
+
+// */
+// @Component end component-checkbox
+
+// @Component start component-trackmania-pop-up-background-2
+// /*
+
+***MainInit***
+***
+Trackmania_PopUpBackground2::MainInit(This);
+***
+
+***MainStart***
+***
+Trackmania_PopUpBackground2::MainStart(This);
+***
+
+***MainLoop***
+***
+Trackmania_PopUpBackground2::MainLoop(This);
+***
+
+// */
+// @Component end component-trackmania-pop-up-background-2
+
+// @Component start menu-libs-scroll
+// /*
+
+***MainInit***
+***
+CMGame_Scroll::MainInit(This);
+***
+
+***MainStart***
+***
+CMGame_Scroll::MainStart(This);
+***
+
+***MainLoop***
+***
+CMGame_Scroll::MainLoop(This);
+***
+
+// */
+// @Component end menu-libs-scroll
+
+// @Component start component-cmgame-selector
+// /*
+
+***MainInit***
+***
+CMGame_Selector::MainInit(This);
+***
+
+***MainStart***
+***
+CMGame_Selector::MainStart(This);
+***
+
+***MainLoop***
+***
+CMGame_Selector::MainLoop(This);
+***
+
+// */
+// @Component end component-cmgame-selector
+
+// @Component start component-textfield
+// /*
+
+***MainInit***
+***
+CMGame_TextField::MainInit(This);
+***
+
+***MainStart***
+***
+CMGame_TextField::MainStart(This);
+***
+
+***MainLoop***
+***
+CMGame_TextField::MainLoop(This);
+***
+
+// */
+// @Component end component-textfield
+
+// @Component start component-popupmultichoice
+// /*
+
+***MainInit***
+***
+Trackmania_PopUpMultiChoice::MainInit(This);
+***
+
+***MainStart***
+***
+Trackmania_PopUpMultiChoice::MainStart(This);
+***
+
+***MainLoop***
+***
+Trackmania_PopUpMultiChoice::MainLoop(This);
+***
+
+// */
+// @Component end component-popupmultichoice
+
+// @Component start race-scores-table
+// /*
+
+Boolean RaceScoresTable_IsDisplayed() {
+	declare Boolean TMGame_ScoresTable_IsDisplayed for UI;
+	return TMGame_ScoresTable_IsDisplayed;
+}
+
+// Use only when the default scores table is replaced by a custom one
+Void RaceScoresTable_SetIsDisplayed(Boolean _IsDisplayed) {
+	declare Boolean TMGame_ScoresTable_IsDisplayed for UI;
+	TMGame_ScoresTable_IsDisplayed = _IsDisplayed;
+}
+
+// */
+// @Component end race-scores-table
+
+Boolean JoinLinkIsValid(K_State _State) {
+	return (
+		_State.JoinLink != "" &&
+		_State.ServerIsReady
+	);
+}
+
+Void JoinNextMatch(K_State _State, Boolean _SkipConfirm) {
+	declare K_State TmpState = _State;
+	if (_SkipConfirm) {
+		TmpState.JoinLink = TL::Replace(TmpState.JoinLink, "#join", "#qjoin");
+	}
+	if (JoinLinkIsValid(TmpState)) {
+		OpenLink(TmpState.JoinLink, CMlScript::LinkType::Goto);
+	}
+}
+
+Void StartHideAnimation(K_Controls _Controls) {
+	if (_Controls.Frame_HideableContent != Null) {
+		declare Real HiddenPosX = -60.;
+		declare Real VisiblePosX = 0.;
+		declare Vec2 StartPos = _Controls.Frame_HideableContent.RelativePosition_V3;
+		declare Real EndPosX = VisiblePosX;
+
+		if (StartPos.X == HiddenPosX) {
+			EndPosX = VisiblePosX;
+			Trackmania_Button::SetIcon(This, _Controls.Button_Hide, Icons::C_Icon_128x128_Arrow_Left);
+			Trackmania_Button::SetIconFocus(This, _Controls.Button_Hide, Icons::C_Icon_128x128_Arrow_Left);
+		} else {
+			EndPosX = HiddenPosX;
+			Trackmania_Button::SetIcon(This, _Controls.Button_Hide, Icons::C_Icon_128x128_Arrow_Right);
+			Trackmania_Button::SetIconFocus(This, _Controls.Button_Hide, Icons::C_Icon_128x128_Arrow_Right);
+		}
+
+		AnimMgr.Flush(_Controls.Frame_HideableContent);
+		AnimMgr.Add(_Controls.Frame_HideableContent, "<anim pos=\"" ^EndPosX^" "^StartPos.Y^ "\" />", 250, CAnimManager::EAnimManagerEasing::Linear);
+	}
+}
+
+Void Focus(CMlControl _From, CMlControl _To) {
+	if (_From != Null) {
+		ComponentNavigation_ComponentNavigation::Unfocus(This, _From);
+		if (Trackmania_Button::IsButton((_From as CMlFrame))) {
+			Trackmania_Button::Unfocus(This, (_From as CMlFrame));
+		} else if (CMGame_ExpendableButton::IsButton((_From as CMlFrame))) {
+			CMGame_ExpendableButton::Unfocus(This, (_From as CMlFrame));
+		}
+	}
+
+	if (_To != Null) {
+		ComponentNavigation_ComponentNavigation::Focus(This, _To);
+		if (Trackmania_Button::IsButton((_To as CMlFrame))) {
+			Trackmania_Button::Focus(This, (_To as CMlFrame));
+		} else if (CMGame_ExpendableButton::IsButton((_To as CMlFrame))) {
+			CMGame_ExpendableButton::Focus(This, (_To as CMlFrame));
+		}
+	}
+}
+
+K_ContentControls GetContentControls(K_State _State) {
+	if (_State.PopUpIsVisible) {
+		return _State.Controls.ContentCenter;
+	}
+	return _State.Controls.ContentSide;
+}
+
+K_State SetVisibility(K_State _State, Boolean _DisplayModule) {
+	declare K_State State = _State;
+	State.DisplayModule = _DisplayModule;
+	State.NeedStateUpdate = True;
+	State.Controls.Frame_Global.Visible = State.DisplayModule;
+	return State;
+}
+
+Void UpdatePopUpButtonsVisibility(K_State _State) {
+	declare Boolean ButtonsAreVisible = _State.PopUpIsVisible && _State.CurrentState == C_State_MatchOver_JoinLinkReady;
+
+	AnimMgr.Flush(_State.Controls.Quad_PopUpBackground);
+	AnimMgr.Flush(_State.Controls.Quad_PopUpBackgroundButtons);
+	if (ButtonsAreVisible) {
+		AnimMgr.Add(_State.Controls.Quad_PopUpBackgroundButtons, "<anim opacity=\"1\" hidden=\"0\" />", 100, CAnimManager::EAnimManagerEasing::QuadIn);
+		AnimMgr.Add(_State.Controls.Quad_PopUpBackground, "<anim opacity=\"0\" hidden=\"1\" />", Now + 100, 100, CAnimManager::EAnimManagerEasing::QuadOut);
+	} else {
+		AnimMgr.Add(_State.Controls.Quad_PopUpBackground, "<anim opacity=\"1\" hidden=\"0\" />", Now + 250, 100, CAnimManager::EAnimManagerEasing::QuadIn);
+		AnimMgr.Add(_State.Controls.Quad_PopUpBackgroundButtons, "<anim opacity=\"0\" hidden=\"1\" />", Now + 250 + 100, 100, CAnimManager::EAnimManagerEasing::QuadOut);
+	}
+
+	_State.Controls.Button_Left.Visible = ButtonsAreVisible;
+	_State.Controls.Button_Right.Visible = ButtonsAreVisible;
+	ComponentNavigation_ComponentNavigation::Lock(_State.Controls.Button_Left, !_State.Controls.Button_Left.Visible);
+	ComponentNavigation_ComponentNavigation::Lock(_State.Controls.Button_Right, !_State.Controls.Button_Right.Visible);
+
+	declare CMlControl FocusedControl = ComponentNavigation_ComponentNavigation::GetFocusedControl(This, C_NavGroup_Center);
+	if (FocusedControl == Null) {
+		Focus(FocusedControl, _State.Controls.Button_Right);
+	}
+}
+
+K_State SetPopUpVisibility(
+	K_State _State,
+	Boolean _PlatformIsFromFirstParty,
+	Boolean _CanDisplayPopUp,
+	Boolean _ScoresTableIsDisplayed,
+	Integer _CurrentState
+) {
+	declare K_State State = _State;
+
+	State.CanDisplayPopUp = _CanDisplayPopUp;
+	State.ScoresTableIsDisplayed = _ScoresTableIsDisplayed;
+	State.PopUpIsVisible = (
+		_PlatformIsFromFirstParty &&
+		State.CanDisplayPopUp &&
+		!State.ButtonClicked &&
+		!State.ScoresTableIsDisplayed && (
+			_CurrentState == C_State_MatchOver_WaitJoinLink ||
+			_CurrentState == C_State_MatchOver_WaitServerReady ||
+			_CurrentState == C_State_MatchOver_JoinLinkReady
+		)
+	);
+	State.Controls.Frame_ContentSide.Visible = !State.PopUpIsVisible;
+	State.Controls.Frame_ContentCenter.Visible = State.PopUpIsVisible;
+	EnableMenuNavigation(State.PopUpIsVisible, False, False, Null, C_InputPriority);
+
+	UpdatePopUpButtonsVisibility(State);
+
+	return State;
+}
+K_State SetPopUpVisibility(
+	K_State _State,
+	Boolean _CanDisplayPopUp,
+	Boolean _ScoresTableIsDisplayed,
+	Integer _CurrentState
+) {
+	return SetPopUpVisibility(
+		_State,
+		C_PlatformIsFromFirstParty,
+		_CanDisplayPopUp,
+		_ScoresTableIsDisplayed,
+		_CurrentState
+	);
+}
+
+Void DisplayResult(K_State _State, Integer _CurrentRank, Text _CompetitionType) {
+	declare K_ContentControls ContentControls = GetContentControls(_State);
+	ContentControls.Label_Result.Visible = _CurrentRank > 0;
+	ContentControls.Label_Trophies.Visible = _CurrentRank > 0;
+	ContentControls.Quad_Result.Visible = _CurrentRank > 0;
+	if (_CurrentRank > 0) {
+		declare Integer[Integer] EarnedTrophies;
+		declare Integer[Integer][Integer] RankToTrophies = COTDConst::GetTrophiesForCompetitionType(_CompetitionType);
+		foreach (Rank => Rewards in RankToTrophies) {
+			if (_CurrentRank <= Rank) {
+				EarnedTrophies = Rewards;
+			} else {
+				break;
+			}
+		}
+		declare Integer BestTrophy = 0;
+		declare Integer BestTrophyCount = 0;
+		foreach (Trophy => TrophyCount in EarnedTrophies) {
+			if (Trophy > BestTrophy) {
+				BestTrophy = Trophy;
+				BestTrophyCount = TrophyCount;
+			}
+		}
+		switch (BestTrophy) {
+			case 7: {
+				ContentControls.Quad_Result.ChangeImageUrl(MenuConst::C_ImageUrl_Trophy_128_Gold1);
+				ContentControls.Label_Result.Value = TL::Compose(C_Text_Result, ""^_CurrentRank);
+				ContentControls.Label_Trophies.Value = TL::Compose(C_Text_ResultTrophy, ""^BestTrophyCount, ""^BestTrophy);
+			}
+			case 6: {
+				ContentControls.Quad_Result.ChangeImageUrl(MenuConst::C_ImageUrl_Trophy_128_Silver3);
+				ContentControls.Label_Result.Value = TL::Compose(C_Text_Result, ""^_CurrentRank);
+				ContentControls.Label_Trophies.Value = TL::Compose(C_Text_ResultTrophy, ""^BestTrophyCount, ""^BestTrophy);
+			}
+			case 5: {
+				ContentControls.Quad_Result.ChangeImageUrl(MenuConst::C_ImageUrl_Trophy_128_Silver2);
+				ContentControls.Label_Result.Value = TL::Compose(C_Text_Result, ""^_CurrentRank);
+				ContentControls.Label_Trophies.Value = TL::Compose(C_Text_ResultTrophy, ""^BestTrophyCount, ""^BestTrophy);
+			}
+			case 4: {
+				ContentControls.Quad_Result.ChangeImageUrl(MenuConst::C_ImageUrl_Trophy_128_Silver1);
+				ContentControls.Label_Result.Value = TL::Compose(C_Text_Result, ""^_CurrentRank);
+				ContentControls.Label_Trophies.Value = TL::Compose(C_Text_ResultTrophy, ""^BestTrophyCount, ""^BestTrophy);
+			}
+			case 3: {
+				ContentControls.Quad_Result.ChangeImageUrl(MenuConst::C_ImageUrl_Trophy_128_Bronze3);
+				ContentControls.Label_Result.Value = TL::Compose(C_Text_Result, ""^_CurrentRank);
+				ContentControls.Label_Trophies.Value = TL::Compose(C_Text_ResultTrophy, ""^BestTrophyCount, ""^BestTrophy);
+			}
+			default: {
+				ContentControls.Quad_Result.ChangeImageUrl("");
+				ContentControls.Label_Result.Value = TL::Compose(C_Text_Result, ""^_CurrentRank);
+				ContentControls.Label_Trophies.Value = "";
+			}
+		}
+	}
+}
+
+K_State DisplayState(K_State _State, Integer _CurrentState, Integer _CurrentRank, Text _CompetitionType) {
+	declare K_State State = _State;
+	State.CurrentState = _CurrentState;
+
+	State = SetPopUpVisibility(State, State.CanDisplayPopUp, State.ScoresTableIsDisplayed, State.CurrentState);
+	declare K_ContentControls ContentControls = GetContentControls(State);
+
+	// Reset display
+	State.Controls.Frame_Content.Visible = True;
+	ContentControls.Frame_Spinner.Visible = False;
+	State.Controls.Label_Timer.Value = "";
+	ContentControls.Label_Message.Value = "";
+	State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = -4.;
+	State.Controls.ContentSide.Label_Message.MaxLine = 5;
+	DisplayResult(State, _CurrentRank, _CompetitionType);
+	State.Controls.Button_Join.RelativePosition_V3 = <-54., -32.5>;
+	Trackmania_Button::HideAndLock(State.Controls.Button_Join);
+
+	if (
+		State.CurrentState != C_State_MatchOver_WaitJoinLink &&
+		State.CurrentState != C_State_MatchOver_WaitServerReady &&
+		State.CurrentState != C_State_MatchStarted_Registering &&
+		State.CurrentState != C_State_Synchronizing
+	) {
+		CMGame_LoadingSpinner::StopAnimation(This, ContentControls.Frame_Spinner);
+	}
+
+	switch (State.CurrentState) {
+		case C_State_Hidden: {
+			State.Controls.Frame_Content.Visible = False;
+		}
+		case C_State_BeforeMatch: {
+			ContentControls.Label_Message.Value = C_Text_BeforeMatch;
+		}
+		case C_State_MatchStarted_NoResult: {
+			ContentControls.Label_Message.Value = C_Text_MatchStarted_NoResult;
+		}
+		case C_State_MatchStarted_Registering: {
+			State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = 0.;
+			ContentControls.Label_Message.Value = C_Text_MatchStarted_Registering;
+			ContentControls.Frame_Spinner.Visible = True;
+			CMGame_LoadingSpinner::StartAnimation(This, ContentControls.Frame_Spinner);
+		}
+		case C_State_MatchOver_WaitJoinLink: {
+			State.Controls.ContentSide.Label_Message.MaxLine = 2;
+			State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = -9.;
+			ContentControls.Label_Message.Value = C_Text_MatchOver_WaitJoinLink;
+			ContentControls.Frame_Spinner.Visible = True;
+			CMGame_LoadingSpinner::StartAnimation(This, ContentControls.Frame_Spinner);
+			DisplayResult(State, _CurrentRank, _CompetitionType);
+		}
+		case C_State_MatchOver_WaitServerReady: {
+			State.Controls.ContentSide.Label_Message.MaxLine = 2;
+			State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = -9.;
+			ContentControls.Label_Message.Value = C_Text_MatchOver_WaitServerReady;
+			ContentControls.Frame_Spinner.Visible = True;
+			CMGame_LoadingSpinner::StartAnimation(This, ContentControls.Frame_Spinner);
+			DisplayResult(State, _CurrentRank, _CompetitionType);
+		}
+		case C_State_MatchOver_JoinLinkReady: {
+			State.Controls.ContentCenter.Label_Message.Value = C_Text_MatchOver_JoinLinkReady;
+			State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = -11.;
+			if (C_PlatformIsFromFirstParty) {
+				State.Controls.ContentSide.Label_Message.Value = C_Text_MatchOver_JoinLinkReadySideFirstParty;
+			} else {
+				State.Controls.ContentSide.Label_Message.Value = C_Text_MatchOver_JoinLinkReady;
+				Trackmania_Button::ShowAndUnlock(State.Controls.Button_Join);
+				AnimMgr.Flush(State.Controls.Button_Join);
+				AnimMgr.Add(State.Controls.Button_Join, "<anim pos=\"0 "^State.Controls.Button_Join.RelativePosition_V3.Y^"\" />", 250, CAnimManager::EAnimManagerEasing::QuadOut);
+			}
+			DisplayResult(State, _CurrentRank, _CompetitionType);
+		}
+		case C_State_MatchOver_RegistrationsOver: {
+			ContentControls.Label_Message.Value = C_Text_MatchOver_RegistrationsOver;
+		}
+		case C_State_MatchOver_MatchNotJoinableAnymore: {
+			ContentControls.Label_Message.Value = C_Text_MatchOver_MatchNotJoinableAnymore;
+		}
+		case C_State_Synchronizing: {
+			State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = 0.;
+			ContentControls.Label_Message.Value = C_Text_Synchronizing;
+			ContentControls.Frame_Spinner.Visible = True;
+			CMGame_LoadingSpinner::StartAnimation(This, ContentControls.Frame_Spinner);
+		}
+	}
+	Tools::FitLabelValue(State.Controls.ContentSide.Label_Message, 2., 1., 0.25);
+
+	return State;
+}
+K_State DisplayState(K_State _State, Integer _CurrentState, Text _CompetitionType) {
+	return DisplayState(_State, _CurrentState, -1, _CompetitionType);
+}
+
+K_State StayOnServer(K_State _State) {
+	declare K_State State = _State;
+
+	State.ButtonClicked = True;
+	State.NeedStateUpdate = True;
+	State = SetPopUpVisibility(State, State.CanDisplayPopUp, State.ScoresTableIsDisplayed, State.CurrentState);
+
+	return State;
+}
+
+K_State Select(K_State _State, CMlControl _SelectedControl) {
+	if (_SelectedControl == Null) return _State;
+
+	declare K_State State = _State;
+
+	switch (_SelectedControl.ControlId) {
+		case "button-hide": StartHideAnimation(State.Controls);
+		case "button-join": JoinNextMatch(State, True);
+		case "button-left": State = StayOnServer(State);
+		case "button-right": JoinNextMatch(State, True);
+		case "button-rules": Trackmania_PopUpMultiChoice::Open(This, State.Controls.PopUpMultiChoice_Rules);
+	}
+
+	return State;
+}
+
+***MainInit***
+***
+declare netread Boolean Net_COTDQualificationsProgress_IsVisible for UI = False;
+declare netread Text Net_COTDQualificationsProgress_JoinLink for UI = "";
+declare netread Integer Net_COTDQualificationsProgress_JoinLinkUpdate for UI = 0;
+declare netread Integer Net_COTDQualificationsProgress_QualificationsStartTime for Teams[0] = -1;
+declare netread Integer Net_COTDQualificationsProgress_QualificationsMaxJoinTime for Teams[0] = 0;
+declare netread Integer Net_COTDQualificationsProgress_AutoJoinTime for Teams[0] = 0;
+declare netread Text Net_COTDQualificationsProgress_CompetitionType for Teams[0] = "";
+declare netread Boolean Net_COTDQualificationsProgress_CanDisplayPopUp for Teams[0] = False;
+declare netread Integer Net_COTDQualificationsProgress_ResetButtonClicked for Teams[0] = 0;
+
+declare K_State State = C_State_Null;
+declare Integer JoinLinkUpdate;
+declare Integer QualificationsProgress;
+declare Text CurrentCompetitionType;
+declare Integer AutoJoinTime;
+declare Integer ResetButtonClicked;
+declare Integer LocalRaceTime;
+declare Integer APIRaceTime;
+declare Integer QualificationsJoinTime;
+declare Boolean IsSynchronizingRecord;
+***
+
+***MainStart***
+***
+State.Controls.Frame_Global <=> (Page.GetFirstChild("frame-global") as CMlFrame);
+State.Controls.Frame_Content <=> (State.Controls.Frame_Global.GetFirstChild("frame-content") as CMlFrame);
+State.Controls.Frame_HideableContent <=> (State.Controls.Frame_Global.GetFirstChild("frame-hideable-content") as CMlFrame);
+State.Controls.Frame_Rules <=> (State.Controls.Frame_Global.GetFirstChild("frame-rules-content") as CMlFrame);
+State.Controls.Label_Timer <=> (State.Controls.Frame_Global.GetFirstChild("label-timer") as CMlLabel);
+State.Controls.Button_Hide <=> (State.Controls.Frame_Global.GetFirstChild("button-hide") as CMlFrame);
+State.Controls.Button_Help <=> (State.Controls.Frame_Global.GetFirstChild("button-help") as CMlFrame);
+State.Controls.Button_Join <=> (State.Controls.Frame_Global.GetFirstChild("button-join") as CMlFrame);
+State.Controls.Button_Left <=> (State.Controls.Frame_Global.GetFirstChild("button-left") as CMlFrame);
+State.Controls.Button_Right <=> (State.Controls.Frame_Global.GetFirstChild("button-right") as CMlFrame);
+State.Controls.Quad_PopUpBackground <=> (State.Controls.Frame_Global.GetFirstChild("quad-popup-background") as CMlQuad);
+State.Controls.Quad_PopUpBackgroundButtons <=> (State.Controls.Frame_Global.GetFirstChild("quad-popup-background-buttons") as CMlQuad);
+State.Controls.PopUpMultiChoice_Rules <=> (Page.GetFirstChild("popupmultichoice-rules") as CMlFrame);
+
+State.Controls.Frame_ContentSide <=> (State.Controls.Frame_Global.GetFirstChild("frame-content-side") as CMlFrame);
+State.Controls.ContentSide = K_ContentControls {
+	Label_Result = (State.Controls.Frame_ContentSide.GetFirstChild("label-result") as CMlLabel),
+	Label_Trophies = (State.Controls.Frame_ContentSide.GetFirstChild("label-trophies") as CMlLabel),
+	Quad_Result = (State.Controls.Frame_ContentSide.GetFirstChild("quad-result") as CMlQuad),
+	Label_Message = (State.Controls.Frame_ContentSide.GetFirstChild("label-message") as CMlLabel),
+	Frame_Spinner = (State.Controls.Frame_ContentSide.GetFirstChild("frame-spinner") as CMlFrame),
+	Label_AutoJoin = (State.Controls.Frame_ContentSide.GetFirstChild("label-auto-join") as CMlLabel)
+};
+
+State.Controls.Frame_ContentCenter <=> (State.Controls.Frame_Global.GetFirstChild("frame-content-center") as CMlFrame);
+State.Controls.ContentCenter = K_ContentControls {
+	Label_Result = (State.Controls.Frame_ContentCenter.GetFirstChild("label-rank") as CMlLabel),
+	Label_Trophies = (State.Controls.Frame_ContentCenter.GetFirstChild("label-trophies") as CMlLabel),
+	Quad_Result = (State.Controls.Frame_ContentCenter.GetFirstChild("quad-trophies") as CMlQuad),
+	Label_Message = (State.Controls.Frame_ContentCenter.GetFirstChild("label-message") as CMlLabel),
+	Frame_Spinner = (State.Controls.Frame_ContentCenter.GetFirstChild("frame-spinner") as CMlFrame),
+	Label_AutoJoin = (State.Controls.Frame_ContentCenter.GetFirstChild("label-auto-join") as CMlLabel)
+};
+
+JoinLinkUpdate = 0;
+QualificationsProgress = COTDConst::C_Progress_Null;
+LocalRaceTime = NetShare::GetMyLocalRaceTime(UI);
+APIRaceTime = NetShare::GetMyAPIRaceTime(UI);
+QualificationsJoinTime = NetShare::GetMyQualificationsJoinTime(UI);
+IsSynchronizingRecord = NetShare::IsSynchronizingRecord(UI);
+
+ComponentNavigation_ComponentNavigation::UseLocalEvents(This, True);
+Focus(ComponentNavigation_ComponentNavigation::GetFocusedControl(This, C_NavGroup_Center), State.Controls.Button_Right);
+State = SetPopUpVisibility(State, State.CanDisplayPopUp, State.ScoresTableIsDisplayed, State.CurrentState);
+State = SetVisibility(State, State.Controls.Frame_Global.Visible);
+***
+
+***MainLoop***
+***
+if (PageIsVisible) {
+	if (State.DisplayModule != Net_COTDQualificationsProgress_IsVisible) {
+		State = SetVisibility(State, Net_COTDQualificationsProgress_IsVisible);
+	}
+
+	if (JoinLinkUpdate != Net_COTDQualificationsProgress_JoinLinkUpdate) {
+		JoinLinkUpdate = Net_COTDQualificationsProgress_JoinLinkUpdate;
+		if (State.JoinLink != Net_COTDQualificationsProgress_JoinLink) {
+			State.JoinLink = Net_COTDQualificationsProgress_JoinLink;
+			State.ServerReadyTime = Now + C_JoinLinkValidDelay;
+			State.ServerIsReady = False;
+		}
+		State.NeedStateUpdate = True;
+	}
+
+	if (CurrentCompetitionType != Net_COTDQualificationsProgress_CompetitionType) {
+		CurrentCompetitionType = Net_COTDQualificationsProgress_CompetitionType;
+		State.NeedStateUpdate = True;
+	}
+
+	if (ResetButtonClicked != Net_COTDQualificationsProgress_ResetButtonClicked) {
+		ResetButtonClicked = Net_COTDQualificationsProgress_ResetButtonClicked;
+		State.ButtonClicked = False;
+		State.NeedStateUpdate = True;
+		State = SetPopUpVisibility(State, State.CanDisplayPopUp, State.ScoresTableIsDisplayed, State.CurrentState);
+	}
+
+	if (State.CanDisplayPopUp != Net_COTDQualificationsProgress_CanDisplayPopUp) {
+		State = SetPopUpVisibility(State, Net_COTDQualificationsProgress_CanDisplayPopUp, State.ScoresTableIsDisplayed, State.CurrentState);
+		State.NeedStateUpdate = True;
+	}
+
+	if (State.ScoresTableIsDisplayed != RaceScoresTable_IsDisplayed()) {
+		State = SetPopUpVisibility(State, State.CanDisplayPopUp, RaceScoresTable_IsDisplayed(), State.CurrentState);
+		State.NeedStateUpdate = True;
+	}
+
+	if (
+		State.CurrentState == C_State_BeforeMatch &&
+		Net_COTDQualificationsProgress_QualificationsStartTime >= GameTime
+	) {
+		State.Controls.Label_Timer.Value = TL::TimeToText(Net_COTDQualificationsProgress_QualificationsStartTime - GameTime, False);
+		if (State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y < -2.) State.Controls.ContentSide.Label_Message.RelativePosition_V3.Y = -2.;
+	} else if (State.Controls.Label_Timer.Value != "") {
+		State.Controls.Label_Timer.Value = "";
+	}
+
+	if (AutoJoinTime != Net_COTDQualificationsProgress_AutoJoinTime) {
+		AutoJoinTime = Net_COTDQualificationsProgress_AutoJoinTime;
+		State.CanAutoJoin = AutoJoinTime > 0;
+	}
+
+	if (
+		State.CanAutoJoin &&
+		AutoJoinTime > 0 &&
+		AutoJoinTime <= GameTime &&
+		State.CurrentState == C_State_MatchOver_JoinLinkReady
+	) {
+		State.CanAutoJoin = False;
+		JoinNextMatch(State, True);
+	}
+
+	if (
+		State.CurrentState == C_State_MatchOver_JoinLinkReady &&
+		AutoJoinTime > 0 &&
+		AutoJoinTime - GameTime > 0
+	) {
+		declare CMlLabel Label_AutoJoin = State.Controls.ContentSide.Label_AutoJoin;
+		if (State.PopUpIsVisible) Label_AutoJoin = State.Controls.ContentCenter.Label_AutoJoin;
+		Label_AutoJoin.Value = TL::TimeToText(AutoJoinTime - GameTime + 1000, False);
+	} else {
+		declare CMlLabel Label_AutoJoin = State.Controls.ContentSide.Label_AutoJoin;
+		if (State.PopUpIsVisible) Label_AutoJoin = State.Controls.ContentCenter.Label_AutoJoin;
+		if (Label_AutoJoin.Value != "") {
+			Label_AutoJoin.Value = "";
+		}
+	}
+
+	if (
+		LocalRaceTime != NetShare::GetMyLocalRaceTime(UI) ||
+		APIRaceTime != NetShare::GetMyAPIRaceTime(UI) ||
+		QualificationsJoinTime != NetShare::GetMyQualificationsJoinTime(UI) ||
+		IsSynchronizingRecord != NetShare::IsSynchronizingRecord(UI) ||
+		QualificationsProgress != NetShare::GetQualificationsProgress(Teams[0])
+	) {
+		LocalRaceTime = NetShare::GetMyLocalRaceTime(UI);
+		APIRaceTime = NetShare::GetMyAPIRaceTime(UI);
+		QualificationsJoinTime = NetShare::GetMyQualificationsJoinTime(UI);
+		IsSynchronizingRecord = NetShare::IsSynchronizingRecord(UI);
+		QualificationsProgress = NetShare::GetQualificationsProgress(Teams[0]);
+		State.NeedStateUpdate = True;
+	}
+
+	if (
+		!State.ServerIsReady &&
+		State.ServerReadyTime > 0 &&
+		State.ServerReadyTime <= Now
+	) {
+		State.ServerIsReady = True;
+		State.ServerReadyTime = -1;
+		State.NeedStateUpdate = True;
+	}
+
+	if (State.CurrentRank != NetShare::GetMyRank(UI)) {
+		State.CurrentRank = NetShare::GetMyRank(UI);
+		State.NeedStateUpdate = True;
+	}
+
+	if (State.NeedStateUpdate) {
+		State.NeedStateUpdate = False;
+		switch (QualificationsProgress) {
+			case COTDConst::C_Progress_Null: {
+				State = DisplayState(State, C_State_Hidden, CurrentCompetitionType);
+			}
+			case COTDConst::C_Progress_RequestNextCOTD, COTDConst::C_Progress_WaitNextCOTD: {
+				State = DisplayState(State, C_State_BeforeMatch, CurrentCompetitionType);
+			}
+			case COTDConst::C_Progress_PlayQualifications: {
+				// Player just joined the server and we did not check their record on the API yet
+				if (IsSynchronizingRecord && APIRaceTime <= 0) {
+					State = DisplayState(State, C_State_Synchronizing, CurrentCompetitionType);
+				}
+				// Player joined too late to qualify
+				else if (
+					Net_COTDQualificationsProgress_QualificationsMaxJoinTime > 0 &&
+					QualificationsJoinTime > 0 &&
+					QualificationsJoinTime > Net_COTDQualificationsProgress_QualificationsMaxJoinTime &&
+					APIRaceTime <= 0
+				) {
+					State = DisplayState(State, C_State_MatchOver_RegistrationsOver, CurrentCompetitionType);
+				}
+				// Player did not finished the race yet
+				else if (LocalRaceTime <= 0 && APIRaceTime <= 0) {
+					State = DisplayState(State, C_State_MatchStarted_NoResult, CurrentCompetitionType);
+				}
+				// Player finished the race at least once but the API did not validated a time yet
+				else if (APIRaceTime <= 0) {
+					State = DisplayState(State, C_State_MatchStarted_Registering, CurrentCompetitionType);
+				}
+				// Player finished the race at least once and this has been validated by the API
+				else {
+					State = DisplayState(State, C_State_Hidden, CurrentCompetitionType);
+				}
+			}
+			case COTDConst::C_Progress_WaitMatchesGeneration, COTDConst::C_Progress_TransferPlayersToKnockout: {
+				if (JoinLinkIsValid(State)) {
+					State = DisplayState(State, C_State_MatchOver_JoinLinkReady, State.CurrentRank, CurrentCompetitionType);
+				} else if (APIRaceTime > 0) {
+					if (State.JoinLink == "") {
+						State = DisplayState(State, C_State_MatchOver_WaitJoinLink, State.CurrentRank, CurrentCompetitionType);
+					} else {
+						State = DisplayState(State, C_State_MatchOver_WaitServerReady, State.CurrentRank, CurrentCompetitionType);
+					}
+				} else if (IsSynchronizingRecord && APIRaceTime <= 0) {
+					State = DisplayState(State, C_State_Synchronizing, CurrentCompetitionType);
+				} else {
+					State = DisplayState(State, C_State_MatchOver_RegistrationsOver, CurrentCompetitionType);
+				}
+			}
+			case COTDConst::C_Progress_TooLateToJoinKnockout: {
+				if (APIRaceTime > 0) {
+					State = DisplayState(State, C_State_MatchOver_MatchNotJoinableAnymore, CurrentCompetitionType);
+				} else {
+					State = DisplayState(State, C_State_MatchOver_RegistrationsOver, CurrentCompetitionType);
+				}
+			}
+			case COTDConst::C_Progress_ServerDutyIsOver: {
+				State = DisplayState(State, C_State_Hidden, CurrentCompetitionType);
+			}
+		}
+	}
+
+	// Check for Navigation events
+	foreach (Event in ComponentNavigation_ComponentNavigation::GetPendingEvents(This)) {
+		switch (Event.Type) {
+			case ComponentNavigation_ComponentNavigation::C_EventType_NavigateInput: {
+				if (
+					(!State.PopUpIsVisible && ComponentNavigation_ComponentNavigation::IsEventFromGroup(This, Event, C_NavGroup_Side)) ||
+					(State.PopUpIsVisible && ComponentNavigation_ComponentNavigation::IsEventFromGroup(This, Event, C_NavGroup_Center))
+				) {
+					if (Event.Input == CMlScriptEvent::EMenuNavAction::Select) {
+						State = Select(State, Event.To);
+					} else {
+						Focus(Event.From, Event.To);
+					}
+				} else if (ComponentNavigation_ComponentNavigation::IsEventFromGroup(This, Event, C_NavGroup_ShowInGameMenu)) {
+					if (
+						Event.Input == CMlScriptEvent::EMenuNavAction::Cancel ||
+						Event.Input == CMlScriptEvent::EMenuNavAction::AppMenu
+					) {
+						ShowInGameMenu();
+					}
+				}
+			}
+			case ComponentNavigation_ComponentNavigation::C_EventType_NavigateMouse: {
+				if (
+					(!State.PopUpIsVisible && ComponentNavigation_ComponentNavigation::IsEventFromGroup(This, Event, C_NavGroup_Side)) ||
+					(State.PopUpIsVisible && ComponentNavigation_ComponentNavigation::IsEventFromGroup(This, Event, C_NavGroup_Center))
+				) {
+					if (Event.Mouse == CMlScriptEvent::Type::MouseClick) {
+						State = Select(State, Event.To);
+					} else if (Event.Mouse == CMlScriptEvent::Type::MouseOver) {
+						Focus(Event.From, Event.To);
+					} else if (Event.Mouse == CMlScriptEvent::Type::MouseOut) {
+						Focus(Event.From, Event.To);
+					}
+				}
+			}
+		}
+	}
+
+	// PopUpMultiChoice events
+	foreach (Event in Trackmania_PopUpMultiChoice::GetPendingEvents(This)) {
+		if (Event.PopUpMultiChoice != Null && Event.PopUpMultiChoice.Id == State.Controls.PopUpMultiChoice_Rules.Id) {
+			switch (Event.Type) {
+				case Trackmania_PopUpMultiChoice::C_EventType_Display: {
+					ComponentNavigation_ComponentNavigation::EnableGroup(This, C_NavGroup_Side, !Event.PopUpMultiChoice.Visible);
+					ComponentNavigation_ComponentNavigation::EnableGroup(This, C_NavGroup_Center, !Event.PopUpMultiChoice.Visible);
+					ComponentNavigation_ComponentNavigation::EnableGroup(This, C_NavGroup_ShowInGameMenu, !Event.PopUpMultiChoice.Visible);
+				}
+			}
+		}
+	}
+}
+***
+
+
+Void ManiaView_DoNothing() {}
+
+main() {
+	+++MainInit+++
+	+++MainStart+++
+	while (True) {
+		yield;
+		+++MainLoop+++
+	}
+	+++MainEnd+++
+}
+--></script>
+</manialink>

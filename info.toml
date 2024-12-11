@@ -1,0 +1,9 @@
+[meta]
+name     = "COTD Quali Rank Toggle"
+author   = "XertroV"
+category = "Overlay"
+version  = "0.1.0"
+
+[script]
+#__DEFINES__
+# dependencies = ["MLHook", "MLFeedRaceData"]
