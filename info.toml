@@ -2,7 +2,7 @@
 name     = "COTD Quali Rank Toggle"
 author   = "XertroV"
 category = "Overlay"
-version  = "0.1.0"
+version  = "0.1.1"
 
 [script]
 #__DEFINES__
