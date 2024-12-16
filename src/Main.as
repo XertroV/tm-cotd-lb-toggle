@@ -19,12 +19,15 @@ const string COTDQualifications_Ranking = "COTDQualifications_Ranking";
 
 // yield a bunch because frequency doesn't matter
 void _yield() {
-    yield(73);
+    // yield(73);
+    yield(31);
 }
 
 
 const wstring GetGameMode() {
-    auto si = cast<CTrackManiaNetworkServerInfo>(GetApp().Network.ServerInfo);
+    auto app = GetApp();
+    // if (app.CurrentPlayground is null) return "";
+    auto si = cast<CTrackManiaNetworkServerInfo>(app.Network.ServerInfo);
     return si.CurGameModeStr;
 }
 
@@ -33,7 +36,9 @@ bool IsGameMode(const string &in mode) {
     return IsGameModeDev(mode);
 #else
     try {
-        auto si = cast<CTrackManiaNetworkServerInfo>(GetApp().Network.ServerInfo);
+        auto app = GetApp();
+        // if (app.CurrentPlayground is null) return false;
+        auto si = cast<CTrackManiaNetworkServerInfo>(app.Network.ServerInfo);
         return si.CurGameModeStr == mode;
     } catch {
         warn("IsGameMode: " + getExceptionInfo());
@@ -44,11 +49,14 @@ bool IsGameMode(const string &in mode) {
 
 
 void Main() {
-    while (!IsGameMode(QualiGameMode)) _yield();
-    inQuali = true;
-    OnEnterQualiMode();
-    while (IsGameMode(QualiGameMode)) _yield();
-    inQuali = false;
+    while (true) {
+        while (!IsGameMode(QualiGameMode)) _yield();
+        inQuali = true;
+        OnEnterQualiMode();
+        while (IsGameMode(QualiGameMode)) _yield();
+        inQuali = false;
+        OnExitQualiMode();
+    }
 }
 
 
@@ -57,8 +65,17 @@ void OnEnterQualiMode() {
     print(PluginName + ": Entered Quali mode");
 #endif
     // yield a while for UI stuff to load; there's no rush
+    sleep(1000);
     _yield();
+    sleep(1000);
+
     FindAndUnhideToggleButton();
+}
+
+void OnExitQualiMode() {
+#if DEV
+    print(PluginName + ": Exited Quali mode");
+#endif
 }
 
 int _lastQualiProgLayerIx = -1;
